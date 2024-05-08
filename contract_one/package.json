@@ -17,6 +17,7 @@
     "typescript": "^5.4.5"
   },
   "scripts": {
-    "compile": "ts-node ./scripts/compile.ts"
+    "compile": "ts-node ./scripts/compile.ts",
+    "test": "yarn jest"
   }
 }
