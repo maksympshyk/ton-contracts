@@ -36,7 +36,7 @@ export class MainContract implements Contract {
   }
 
   async getData(provider: ContractProvider) {
-    const { stack } = await provider.get("get_the_last_sender", []);
+    const { stack } = await provider.get("get_the_latest_sender", []);
     return {
       recent_sender: stack.readAddress(),
     };
