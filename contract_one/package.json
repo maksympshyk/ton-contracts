@@ -1,0 +1,17 @@
+{
+  "name": "contract_one",
+  "version": "1.0.0",
+  "license": "MIT",
+  "devDependencies": {
+    "@swc/core": "^1.5.5",
+    "@ton-community/func-js": "^0.7.0",
+    "@ton/core": "^0.56.3",
+    "@types/node": "^20.12.11",
+    "@ton/crypto": "^3.2.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "compile": "ts-node ./scripts/compile.ts"
+  }
+}
