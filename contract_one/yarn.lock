@@ -666,6 +666,11 @@
     "@ton-community/func-js-bin" "0.4.4-newops.1"
     arg "^5.0.2"
 
+"@ton-community/sandbox@^0.11.0":
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/@ton-community/sandbox/-/sandbox-0.11.0.tgz#411eae67c8f7aca07b6ae8e53233f6c3c21fcbe1"
+  integrity sha512-3tlSprRBTSu9m0tJTC3cl4MXQep1vfNMPqk9+JAXSRJu9ToEvIUVpqO6MQNkbz9LkKDuOEBs5vyqT37DlKKcWw==
+
 "@ton/core@^0.56.3":
   version "0.56.3"
   resolved "https://registry.yarnpkg.com/@ton/core/-/core-0.56.3.tgz#1162764573abb76032eba70f8497e5cb2ea532ee"

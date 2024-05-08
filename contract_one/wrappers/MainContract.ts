@@ -1,4 +1,13 @@
-import { Address, beginCell, Cell, Contract, contractAddress } from "@ton/core";
+import {
+  Address,
+  beginCell,
+  Cell,
+  Contract,
+  contractAddress,
+  ContractProvider,
+  Sender,
+  SendMode,
+} from "@ton/core";
 
 export class MainContract implements Contract {
   constructor(
@@ -12,5 +21,24 @@ export class MainContract implements Contract {
     const address = contractAddress(workchain, init);
 
     return new MainContract(address, init);
+  }
+
+  async sendInternalMessage(
+    provider: ContractProvider,
+    sender: Sender,
+    value: bigint
+  ) {
+    await provider.internal(sender, {
+      value,
+      sendMode: SendMode.PAY_GAS_SEPARATELY,
+      body: beginCell().endCell(),
+    });
+  }
+
+  async getData(provider: ContractProvider) {
+    const { stack } = await provider.get("get_the_last_sender", []);
+    return {
+      recent_sender: stack.readAddress(),
+    };
   }
 }
